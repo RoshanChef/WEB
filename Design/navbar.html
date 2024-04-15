@@ -1,0 +1,57 @@
+<!-- for external css file -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <link rel="stylesheet" href={% static "CSS/CSS/all.min.css"}>
+    <link rel="stylesheet" href={% static "CSS/webfonts" %}>
+    <link rel="stylesheet" href={% static "CSS/style.css" %}>
+   
+</head>
+
+<body>
+
+    <header>
+        <a href="#">
+            <i class="fa-solid fa-bus"></i>
+            Bus system
+        </a>
+
+        <ul>
+            <li><a href="#"> <span>Home</span>
+                <i class="fa-solid fa-home"></i>
+            </a></li>
+            <li><a href="#"><span>About</span></a></li>
+            <li><a href="#"><span>Contact</span></a></li>
+            <li><a href="#"> <span>Chat</span></a></li>
+            {% if session %}
+            <li class="side">
+                <a href={% url "logout" %}>Logout</a>
+            </li>
+            {% else %}
+            <li class="side">
+                <a href={% url "login" %}>Login</a>
+            </li>
+            {% endif %}
+        </ul>
+
+        {% if  session%}
+        <div class="logo">
+           
+            <a href="#"> <i class="fa-solid fa-user"></i> {{session.name}}</a>
+            <a href="#">Register</a>
+        </div>
+        {% endif %}
+    </header>
+
+    <!-- content -->
+    {% block abc %}
+    {% endblock %}
+
+</body>
+
+</html>

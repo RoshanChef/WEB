@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #333;
+            color: wheat;
+        }
+        
+        h3 {
+            background-color: blueviolet;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 2rem;
+            border-radius: 10px;
+            color: white;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .boxes {
+            /* background-color: blueviolet; */
+            padding: 0.7rem;
+            margin: 2rem 0px;
+            
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(5rem, 20rem));
+            grid-template-rows: repeat(auto-fit, minmax(10rem, 20rem));
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .img_con {
+            height: 15rem;
+            width: 15rem;
+            align-self: center;
+            justify-self: center;
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .img_con h4 {
+            margin: 1 rem;
+        }
+        
+        img {
+            border: 6px dotted #89fae0;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            transition: .51s linear all 0s;
+        }
+        
+        img:hover {
+            cursor: pointer;
+            opacity: .7;
+            transform: scale(.95);
+        }
+        
+        .point {
+            display: flex;
+            justify-content: space-evenly;
+            color: rgb(255, 255, 255);
+        }
+
+        .msg_container {
+            text-align: center;
+            color: #441818;
+            padding: 10px;
+            margin: 5rem auto;
+            font-size: 20px;
+            background-color: rgb(242, 235, 225);
+            padding: 20px 90px;
+            font-weight: bolder;
+            width: 35rem;
+            border-radius: 5px;
+        }
+        ::selection{
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Rock Paper Scissor</h3>
+    <div class="boxes">
+
+        <div class="img_con">
+            <img src="rock.jpg" id="rock" alt="not found">
+            <h4>Rock</h4>
+        </div>
+        <div class="img_con">
+            <img src="paper.jpg" id="paper" alt="not found">
+            <h4>Paper</h4>
+        </div>
+        <div class="img_con">
+            <img src="Scissor.jpg" id="Scissor" alt="not fount">
+            <h4>Scissor</h4>
+        </div>
+    </div>
+
+    <div class="point">
+        <h2>You : <span id="you">0</span></h2>
+        <h2>computer : <span id="computer">0</span></h2>
+    </div>
+    <div class="msg_container">
+        Play your game
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queires</title>
+    <style>
+        .con {
+            border: 3px solid black;
+            /* display: flex; */
+        }
+
+        .box {
+            width: 200px;
+            border: 2px solid red;
+            margin: 2px;
+            height: 200px;
+            font-size: 19px;
+            text-align: center;
+            line-height: 200px;
+        }
+        .box1{
+            background-color: rgb(255, 255, 68);
+        }
+        .box2{
+            background-color: rgb(152, 255, 68);
+        }
+        .box3{
+            background-color: rgb(255, 137, 68);
+        }
+        .box4{
+            background-color: rgb(68, 112, 255);
+        }
+
+
+        @media (max-width:680px) {
+          
+            .con{
+                background-color: burlywood;
+                display: flex;
+            }
+        }
+
+        @media (min-width:681px) {
+            .con{
+                display: flex;
+                flex-direction: column;
+                background-color: aqua;
+            }
+
+            
+        }
+           
+    </style>
+</head>
+
+<body>
+
+    <div class="con">
+        <div class="box1 box">1</div>
+        <div class="box2 box">2</div>
+        <div class="box3 box">3</div>
+        <div class="box4 box">4</div>
+    </div>
+
+
+
+</body>
+
+</html>

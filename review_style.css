@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Figtree", sans-serif;
+  font-size: 16px;
+}
+
+body    {
+}
+main{
+    background-color: hsl(47, 88%, 63%);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    height: 70vh;
+}
+
+img {
+    width: 250px;
+    border-radius: 6px;
+}
+
+h1  {
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.card   {
+    width: 280px;
+    background-color:  hsl(0, 0%, 100%);
+    padding: 14px 14px;
+/*    margin: auto;*/
+/*    margin-top: 150px;*/
+
+    box-sizing: border-box;
+    border: solid 1px;
+    border-radius: 14px;
+    box-shadow: 6px 6px 0px 0px #000;
+    transition: 0.5s;
+}
+
+.Learn_tag  {
+    padding: 4px 8px;
+    background-color: hsl(47, 88%, 63%);
+    font-size: 10px;
+    font-weight: 800 ;
+    width: fit-content;
+    border-radius: 2px;
+    margin-top: 14px;
+    margin-bottom: 7px;
+}
+
+.date_tag   {
+    font-size: 10px;
+    margin-bottom: 12px;
+    font-weight: 500px;
+}
+
+.card_content   {
+    font-size: 11px;
+    color: hsl(0, 0%, 50%);
+    margin-bottom: 18px;
+}
+
+.img    {
+    text-align: center;
+
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    margin: 10px 10px;
+    margin-left: 0;
+}
+
+.avatar img {
+    width: 24px;
+    
+}
+
+.avatar p{
+    font-size: 11px;
+    margin-left: 8px;
+    font-weight: 800;
+}
+
+h1:hover    {
+    color:hsl(47, 88%, 63%) ;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 10px 10px 0px 0px #000;
+    
+}

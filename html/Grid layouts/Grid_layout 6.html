@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout 6</title>
+    <style>
+                * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .con {
+            width: 100%;
+            height: 100%;
+            background-color: #6d5dff;
+            padding: 10px;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        .item{
+            border: 2px solid black;
+            background-color: rgb(0, 0, 0);
+            color: wheat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .footer1{
+            grid-column-start:3 ;
+            grid-column-end: 6;
+        }
+        .footer2{
+            grid-column-start:1 ;
+            grid-column-end: 6;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="item">box 1</div>
+        <div class="item">box 2</div>
+        <div class="item">box 3</div>
+        <div class="item">box 4</div>
+        <div class="item">box 5</div>
+        <div class="item">box 6</div>
+        <div class="item">box 7</div>
+        <div class="item footer1">footer 1</div>
+        <div class="item footer2">footer 2</div>
+    </div>
+    
+</body>
+</html>

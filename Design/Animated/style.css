@@ -1,0 +1,270 @@
+.slider {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .list .item {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.slider .list .item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .list .item .content_2 {
+    position: absolute;
+    color: white;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 3rem;
+    box-sizing: border-box;
+    max-width: 40%;
+    text-shadow: 0 .3rem .5rem #0004;
+}
+
+.slider .list .item .content_2 .title {
+    font-weight: bold;
+    letter-spacing: .7rem;
+    color: white;
+}
+
+.slider .list .item .content_2 .describe {
+    font-weight: bold;
+    color: rgb(249, 180, 53);
+    font-size: 2.5rem;
+}
+
+.thumbnail {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.thumbnail .item {
+    position: relative;
+    width: 15.72rem;
+    height: 10rem;
+    flex-shrink: 0;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.thumbnail .item .content_2 {
+    position: absolute;
+    bottom: .5rem;
+    left: .5rem;
+    right: .5rem;
+    color: rgb(255, 237, 204);
+}
+
+.thumbnail .item .content_2 title {
+    font-weight: bold;
+}
+
+.arrows {
+    position: absolute;
+    top: 80%;
+    left: 32%;
+    width: 10rem;
+    max-width: 30%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.arrows button {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(172, 168, 168, .5);
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    font-weight: bold;
+    transition: all .5s linear 0s;
+    z-index: 100;
+}
+
+.arrows button:hover {
+    background-color: #eee;
+    color: #585;
+}
+
+.slider .list .item:nth-child(1) {
+    z-index: 1;
+}
+
+.slider .list .item:nth-child(1) .title,
+.slider .list .item:nth-child(1) .desc,
+.slider .list .item:nth-child(1) .describe {
+    transform: translateY(5rem);
+    filter: blur(1rem);
+    opacity: 0;
+    animation: showCon .5s 1s linear 1 forwards;
+}
+
+@keyframes showCon {
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+.slider .list .item:nth-child(1) .title {
+    animation-delay: 1.2s;
+}
+
+.slider .list .item:nth-child(1) .desc {
+    animation-delay: 1.4s;
+}
+
+.slider .list .item:nth-child(1) .describe {
+    animation-delay: 1.6s;
+}
+
+
+/* effect of next button */
+.slider.next .list .item:nth-child(1) img {
+    width: 5rem;
+    height: 10rem;
+    position: absolute;
+    left: 50%;
+    bottom: 5rem;
+    border-radius: 5rem;
+    animation: showImg 0.5s linear 1 forwards;
+}
+
+@keyframes showImg {
+    to {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+}
+
+.slider.next .thumbnail .item:nth-child(3) {
+    width: 0;
+    overflow: hidden;
+    animation: showThumb 0.5s linear 1 forwards;
+}
+
+@keyframes showThumb {
+    to {
+        width: 15rem;
+    }
+}
+
+.slider.next .thumbnail {
+    transform: translateX(15rem);
+    animation: transThub 0.5s linear 1 forwards;
+}
+
+@keyframes transThub {
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* prev effect  */
+.slider.prev .list .item:nth-child(2) {
+    z-index: 2;
+}
+
+.slider.prev .list .item:nth-child(2) img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: outImg 0.5s linear 1s forwards;
+}
+
+@keyframes outImg {
+    to {
+        width: 15.7rem;
+        height: 10.5rem;
+        border-radius: .5rem;
+        bottom: 5.2rem;
+        left: 49.2%;
+    }
+}
+
+.slider.prev .thumbnail .item:nth-child(1) {
+    width: 1rem;
+    opacity: 0;
+    overflow: hidden;
+    animation: showThumb 0.5s linear 1 forwards;
+}
+
+
+.slider.prev .list .item:nth-child(2) .title,
+.slider.prev .list .item:nth-child(2) .desc,
+.slider.prev .list .item:nth-child(2) .describe {
+    animation: contentOut 1.5s linear 1 forwards;
+}
+
+@keyframes contentOut {
+    to {
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+.slider.next .arrows button,
+.slider.prev .arrows button {
+    pointer-events: none;
+}
+
+/* time effect */
+.time {
+    width: 0%;
+    height: .2rem;
+    background-color: orange;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.slider.next .time,
+.slider.prev .time {
+    animation: timeRunning 2s linear 1 forwards;
+    width: 100%;
+}
+
+@keyframes timeRunning {
+    to {
+        width: 0;
+    }
+}
+
+@media screen and (max-width:678px) {
+    .slider .list .item .content_2 {
+        padding-right: 0;
+    }
+
+    .slider .list .item .content .title {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex Box</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            font-size: 29px;
+            border: 3px solid black;
+            margin: 2px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        .box1 {
+            background-color: rgb(47, 255, 203);
+            order: 4;
+            /* flex-grow: 1; */
+            flex-shrink: 5;
+            flex-basis: 800px;
+        }
+
+        .box2 {
+            /* flex-grow: 10; */
+            order: 1;
+            background-color: greenyellow;
+        }
+
+        .box3 {
+            /* flex-grow: 1; */
+            order: 2;
+            background-color: rgb(47, 54, 255);
+        }
+
+        .box4 {
+            /* flex-grow: 5; */
+            order: 3;
+            /* align-self: center; */
+            background-color: rgb(255, 89, 47);
+        }
+
+        .con {
+            align-items: start;
+            justify-content: start;
+            align-content: start;
+            display: flex;
+            /* flex-wrap: wrap; */
+            flex-direction: row;
+            /* flex-flow: row wrap; */
+            height: 800px;
+            border: 3px solid red;
+            background-color: rgba(253, 253, 182, .5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+
+    </div>
+
+</body>
+
+</html>

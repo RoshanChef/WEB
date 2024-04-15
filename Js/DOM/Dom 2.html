@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 3 Add element</title>
+    <style>
+        .con{
+            background-color: blueviolet;
+            padding: 10px;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="con">
+        <h2>Roshan Kalmathe</h2>
+        <ul>List
+            <li>item-1</li>
+            <li>item-2</li>
+            <li>item-3</li>
+            <li>item-4</li>
+        </ul>
+    </div>
+    <h2>Roshan</h2>
+    <script>
+
+        //CREATE
+        // let newBtn = document.createElement('button');
+        // newBtn.innerText="Click Here !!";
+
+ 
+        let parent = document.querySelector('.con');
+        // parent.append(newBtn); //at the end 
+        // parent.prepend(newBtn); // add to first
+        
+        // parent.before(newBtn); // add to outside start
+        // parent.after(newBtn); // add to outside end
+        
+        // Remove
+        parent.remove();
+    </script>
+
+</body>
+
+</html>

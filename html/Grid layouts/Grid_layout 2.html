@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout 2</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .con {
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            padding: 10px;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+
+        .side {
+            grid-row-start: 1;
+            grid-row-end: 5;
+        }
+
+        .box1 {
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
+
+        .item {
+            background-color: blueviolet;
+            color: wheat;
+            font-size: 22px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content1,.content2{
+            grid-row-start:2 ;
+            grid-row-end:4 ;
+        }
+
+        .foot {
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <div class="item side">side</div>
+        <div class="item box1">box-1</div>
+        <div class="item box2">box-2</div>
+        <div class="item content1">content-4</div>
+        <div class="item content2">content-5</div>
+        <div class="item article">article</div>
+        <div class="item foot">footer</div>
+    </div>
+
+</body>
+
+</html>

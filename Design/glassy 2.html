@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassy</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="webfonts/">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            height: 100vh;
+            width: 100%;
+            background-image: url('back.jpg');
+            background-position: space-between;
+            background-size: cover;
+        }
+
+        .user_img {
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            margin: 0 auto;
+            gap: .8rem;
+            background-color: rgba(211, 209, 209, 0.3);
+            border-radius: 1rem;
+            min-margin: 0 1rem;
+        }
+
+        .user_img img {
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+            margin: auto;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 5rem;
+            background-color: rgba(197, 197, 197, .22);
+            backdrop-filter: blur(0.8rem);
+            transition: .3s all linear 0s;
+        }
+
+        .user_img .title ,
+        .user_img i {
+            font-size: 1rem;
+            white-space: nowrap;
+            display: none;
+        }
+
+       .sidebar:hover .user_img .title , .user_img i {
+            display: block;
+        }
+
+
+        .user_img p {
+            font-size: .5rem;
+        }
+
+        .user_img i {
+            position: absolute;
+            font-size: .5rem;
+            top: 1rem;
+            color: rgb(2, 2, 252);
+            right: .4rem;
+        }
+        ul{
+            padding-top: 2rem;
+            padding-left: .7rem;
+        }
+        ul li{
+            font-size: 1.3rem;
+            display: flex;
+            gap: 1rem;
+            margin: 1rem;
+        }
+        ul li p{
+            display: none;
+            transition: .3s all linear 0s;
+        }
+        .sidebar:hover ul li p {
+            display: block;
+        }
+
+        .log{
+            position: absolute;
+            bottom: 0;
+            right: 11%;
+            display: flex;
+            justify-content: center;
+            margin: 1rem;
+            gap: 1rem;
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+        .log p {
+            display: none;
+        }
+        .sidebar:hover{
+            width: 15rem;
+        }
+        .sidebar:hover .log p{
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="sidebar">
+            <div class="user_img">
+                <img src="hrithik.jpg" alt="">
+                <div class="title">
+                    <h3>Hrithik Roshan</h3>
+                    <p>hrithikroshan@gmail.com</p>
+                </div>
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+            <div class="options">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-dashboard"></i>
+                        <p>Dashboard</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-link"></i>
+                        <p>Link</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-laptop"></i>
+                        <p>Report</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-keyboard"></i>
+                        <p>Type</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-mouse"></i>
+                        <p>Move</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-broom"></i>
+                        <p>Clean</p>
+                    </li>
+
+                </ul>
+            </div>
+
+
+
+            <div class="log">
+                <i class="fa-solid fa-sign-out"></i>
+                <p>Logout</p>
+            </div>
+
+        </div>
+
+
+
+    </header>
+
+</body>
+
+</html>

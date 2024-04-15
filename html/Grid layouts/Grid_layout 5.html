@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout 5</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .con {
+            width: 100%;
+            height: 100%;
+            background-color: #5dffa3;
+            padding: 10px;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .item {
+            color: rgb(255, 249, 237);
+            font-size: 21px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+        }
+
+        .header {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .side {
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        .art {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <div class="item header">Header</div>
+        <div class="item side">sidebar</div>
+        <div class="item art">article</div>
+        <div class="item">box 4</div>
+        <div class="item">box 5</div>
+    </div>
+
+</body>
+
+</html>

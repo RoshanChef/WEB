@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout 7</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+        .con {
+            width: 100%;
+            height: 100%;
+            background-color: blueviolet;
+            padding: 10px;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+        
+        .item {
+            background-color: #333;
+            font-size: 31px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: wheat;
+        }
+        .head{
+            grid-column-start:1 ;
+            grid-column-end:3 ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <div class="item head">box 1</div>
+        <div class="item">box 2</div>
+        <div class="item">box 3</div>
+        <div class="item">box 4</div>
+        <div class="item">box 5</div>
+    </div>
+    
+
+</body>
+
+</html>

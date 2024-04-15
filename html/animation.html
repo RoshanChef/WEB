@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .con {
+            background-color: rgb(252, 252, 174);
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .box1 {
+            width: 300px;
+            height: 70px;
+            margin: 5px;
+            background-color: blue;
+            border: 3px solid black;
+            position: relative;
+            border-radius: 5px;
+            /* animation-iteration-count: infinite; */
+            /* animation-timing-function: cubic-bezier(0.72, -1.1, 0, 1.03); */
+            /* animation-timing-function: linear; */
+            /* animation-direction: alternate; */
+            /* animation-name: rightMove; */
+            /* animation-duration: 3s; */
+            /* animation-delay: 0s; */
+
+            /* animation-fill-mode: backwards; */
+            /* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+            animation: 3s linear 0s infinite alternate none running rightMove;
+        }
+
+        @keyframes rightMove {
+            from {
+                top: 0;
+                left: 2%;
+            }
+
+            to {
+                top: 0%;
+                left: 75%;
+            }
+        }
+
+
+        .box2 {
+            width: 300px;
+            height: 70px;
+            margin: 5px;
+            background-color: blue;
+            border: 3px solid black;
+            position: relative;
+            border-radius: 5px;
+            /* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+            animation: 3s linear 0s infinite alternate none running leftMove;
+        }
+
+        @keyframes leftMove {
+            from {
+                top: 78%;
+                left: 75%;
+            }
+
+            to {
+                top: 78%;
+                left: 2%;
+            }
+        }
+
+        .circle {
+            background-color: red;
+            width: 70px;
+            border-radius: 50%;
+            height: 70px;
+
+            margin: 0 auto;
+            position: absolute;
+            inset: 50%;
+            top: 11%;
+          
+
+            translate: -50%;
+            animation: 10s linear 0s infinite alternate none running movement;
+        }
+
+        @keyframes movement {
+
+
+
+            0%{
+                /* top: 79.6%; */
+                top: 11%;
+                right: -40%;
+            }
+            25%{
+                top: 79.6%;
+                right: -6%;
+                /* inset: 50%; */
+            }
+
+            75% {
+            top:10%;
+            left:5%;
+            }
+
+            100% {
+                top: 80%;
+                right: -6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <div class="box1"></div>
+        <div class="circle"></div>
+        <div class="box2"></div>
+
+    </div>
+</body>
+
+</html>
